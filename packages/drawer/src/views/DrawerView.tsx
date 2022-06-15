@@ -19,7 +19,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import Animated from 'react-native-reanimated';
+import * as Reanimated from 'react-native-reanimated';
 import { useSafeAreaFrame } from 'react-native-safe-area-context';
 
 import type {
@@ -80,12 +80,9 @@ function DrawerViewBase({
   detachInactiveScreens = Platform.OS === 'web' ||
     Platform.OS === 'android' ||
     Platform.OS === 'ios',
-  // Running in chrome debugger
-  // @ts-expect-error
-  useLegacyImplementation = !global.nativeCallSyncHook ||
-    // Reanimated 2 is not configured
-    // @ts-expect-error: the type definitions are incomplete
-    !Animated.isConfigured?.(),
+  // Reanimated 2 is not configured
+  // @ts-expect-error: the type definitions are incomplete
+  useLegacyImplementation = !Reanimated.isConfigured?.(),
 }: Props) {
   const Drawer: React.ComponentType<DrawerProps> = useLegacyImplementation
     ? require('./legacy/Drawer').default
@@ -205,6 +202,7 @@ function DrawerViewBase({
     return (
       <MaybeScreenContainer
         enabled={detachInactiveScreens}
+        hasTwoStates
         style={styles.content}
       >
         {state.routes.map((route, index) => {

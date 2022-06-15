@@ -35,10 +35,12 @@ export type NativeStackNavigationEventMap = {
 
 export type NativeStackNavigationProp<
   ParamList extends ParamListBase,
-  RouteName extends keyof ParamList = string
+  RouteName extends keyof ParamList = string,
+  NavigatorID extends string | undefined = undefined
 > = NavigationProp<
   ParamList,
   RouteName,
+  NavigatorID,
   StackNavigationState<ParamList>,
   NativeStackNavigationOptions,
   NativeStackNavigationEventMap
@@ -47,9 +49,10 @@ export type NativeStackNavigationProp<
 
 export type NativeStackScreenProps<
   ParamList extends ParamListBase,
-  RouteName extends keyof ParamList = string
+  RouteName extends keyof ParamList = string,
+  NavigatorID extends string | undefined = undefined
 > = {
-  navigation: NativeStackNavigationProp<ParamList, RouteName>;
+  navigation: NativeStackNavigationProp<ParamList, RouteName, NavigatorID>;
   route: RouteProp<ParamList, RouteName>;
 };
 
@@ -182,6 +185,7 @@ export type NativeStackNavigationOptions = {
    *
    * For large title to collapse on scroll, the content of the screen should be wrapped in a scrollable view such as `ScrollView` or `FlatList`.
    * If the scrollable area doesn't fill the screen, the large title won't collapse on scroll.
+   * You also need to specify `contentInsetAdjustmentBehavior="automatic"` in your `ScrollView`, `FlatList` etc.
    *
    * Only supported on iOS.
    *
@@ -249,6 +253,12 @@ export type NativeStackNavigationOptions = {
    */
   headerTintColor?: string;
   /**
+   * Function which returns a React Element to render as the background of the header.
+   * This is useful for using backgrounds such as an image, a gradient, blur effect etc.
+   * You can use this with `headerTransparent` to render content underneath a translucent header.
+   */
+  headerBackground?: () => React.ReactNode;
+  /**
    * Function which returns a React Element to display on the left side of the header.
    * This replaces the back button. See `headerBackVisible` to show the back button along side left element.
    */
@@ -298,9 +308,11 @@ export type NativeStackNavigationOptions = {
     }
   >;
   /**
-   * Options to render a native search bar on iOS.
+   * Options to render a native search bar.
+   * You also need to specify `contentInsetAdjustmentBehavior="automatic"` in your `ScrollView`, `FlatList` etc.
+   * If you don't have a `ScrollView`, specify `headerTransparent: false`.
    *
-   * @platform ios
+   * Only supported on iOS and Android.
    */
   headerSearchBarOptions?: SearchBarProps;
   /**
@@ -344,6 +356,24 @@ export type NativeStackNavigationOptions = {
    */
   contentStyle?: StyleProp<ViewStyle>;
   /**
+   * Whether the gesture to dismiss should use animation provided to `animation` prop. Defaults to `false`.
+   *
+   * Doesn't affect the behavior of screens presented modally.
+   *
+   * @platform ios
+   */
+  customAnimationOnGesture?: boolean;
+  /**
+   * Whether the gesture to dismiss should work on the whole screen. Using gesture to dismiss with this option results in the same
+   * transition animation as `simple_push`. This behavior can be changed by setting `customAnimationOnGesture` prop. Achieving the
+   * default iOS animation isn't possible due to platform limitations. Defaults to `false`.
+   *
+   * Doesn't affect the behavior of screens presented modally.
+   *
+   * @platform ios
+   */
+  fullScreenGestureEnabled?: boolean;
+  /**
    * Whether you can use gestures to dismiss this screen. Defaults to `true`.
    *
    * Only supported on iOS.
@@ -367,7 +397,9 @@ export type NativeStackNavigationOptions = {
    * Supported values:
    * - "default": use the platform default animation
    * - "fade": fade screen in or out
-   * - "flip": flip the screen, requires stackPresentation: "modal" (iOS only)
+   * - "flip": flip the screen, requires presentation: "modal" (iOS only)
+   * - "simple_push": use the platform default animation, but without shadow and native header transition (iOS only)
+   * - "slide_from_bottom": slide in the new screen from bottom
    * - "slide_from_right": slide in the new screen from right (Android only, uses default animation on iOS)
    * - "slide_from_left": slide in the new screen from left (Android only, uses default animation on iOS)
    * - "none": don't animate the screen

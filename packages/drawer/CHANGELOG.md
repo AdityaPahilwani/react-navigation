@@ -3,6 +3,95 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.4.0...@react-navigation/drawer@6.4.1) (2022-04-01)
+
+**Note:** Version bump only for package @react-navigation/drawer
+
+
+
+
+
+# [6.4.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.3.3...@react-navigation/drawer@6.4.0) (2022-04-01)
+
+
+### Features
+
+* add an ID prop to navigators ([4e4935a](https://github.com/react-navigation/react-navigation/commit/4e4935ac2584bc1a00209609cc026fa73e12c10a))
+
+
+
+
+
+## [6.3.3](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.3.2...@react-navigation/drawer@6.3.3) (2022-03-26)
+
+
+### Bug Fixes
+
+* **drawer:** fix drawer clearing interaction handle ([#10413](https://github.com/react-navigation/react-navigation/issues/10413)) ([ee7405e](https://github.com/react-navigation/react-navigation/commit/ee7405ee7e43539fc78f466b9f769b1834b4af49))
+
+
+
+
+
+## [6.3.2](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.3.1...@react-navigation/drawer@6.3.2) (2022-03-25)
+
+
+### Bug Fixes
+
+* don't force legacy implementation on chrome debugger ([94730e0](https://github.com/react-navigation/react-navigation/commit/94730e0b69513481265a80375bbfd8198b5a9627))
+* fix drawer in RTL and when on right. fixes [#10335](https://github.com/react-navigation/react-navigation/issues/10335) ([a3fad5b](https://github.com/react-navigation/react-navigation/commit/a3fad5b37b4fbb194071b25286767a81d52f8096))
+* remove unsupported option from types ([08c61ad](https://github.com/react-navigation/react-navigation/commit/08c61ad9305a20d894ea0a67a620cf5b4440fdcd))
+
+
+
+
+
+## [6.3.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.3.0...@react-navigation/drawer@6.3.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* fix checking whether reanimated 2 is configured ([ba868fc](https://github.com/react-navigation/react-navigation/commit/ba868fcc87035958dd3250e81691f1f3098be033))
+
+
+
+
+
+# [6.3.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.2.0...@react-navigation/drawer@6.3.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **drawer:** fix drawer when changing `drawerType` (ex: front -> permanent) ([#10304](https://github.com/react-navigation/react-navigation/issues/10304)) ([6f7c287](https://github.com/react-navigation/react-navigation/commit/6f7c287f4a2952b34caf2c52afa096776adaec74)), closes [#10305](https://github.com/react-navigation/react-navigation/issues/10305)
+
+
+### Features
+
+* add drawerAllowFontScaling prop to drawer package ([#10041](https://github.com/react-navigation/react-navigation/issues/10041)) ([bd7786e](https://github.com/react-navigation/react-navigation/commit/bd7786e197618353c40b5176486ae15763fa9973))
+* add prop for new container ([#9772](https://github.com/react-navigation/react-navigation/issues/9772)) ([3fb2140](https://github.com/react-navigation/react-navigation/commit/3fb21409d6d0b66266c6d5eded2014ef2ebbda0a))
+* add the 'drawerPress' event ([#9529](https://github.com/react-navigation/react-navigation/issues/9529)) ([0c86f76](https://github.com/react-navigation/react-navigation/commit/0c86f76401e06557d9ff76613ebfde832259f1d7))
+
+
+
+
+
+# [6.2.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.1.8...@react-navigation/drawer@6.2.0) (2022-01-29)
+
+
+### Bug Fixes
+
+* fix drawer disappearing on web when switching drawerType ([5246574](https://github.com/react-navigation/react-navigation/commit/524657484e6b21ecc5754b63468dd00304a8e450)), closes [#10210](https://github.com/react-navigation/react-navigation/issues/10210)
+* fix useDrawerStatus typings ([#10163](https://github.com/react-navigation/react-navigation/issues/10163)) ([a11ada8](https://github.com/react-navigation/react-navigation/commit/a11ada84604848090ec374990023d0a352628388)), closes [#10066](https://github.com/react-navigation/react-navigation/issues/10066)
+
+
+### Features
+
+* **native-stack:** export NativeStackView to support custom routers on native-stack ([#10260](https://github.com/react-navigation/react-navigation/issues/10260)) ([7b761f1](https://github.com/react-navigation/react-navigation/commit/7b761f1cc069ca68b96b5155be726024a345346f))
+
+
+
+
+
 ## [6.1.8](https://github.com/react-navigation/react-navigation/compare/@react-navigation/drawer@6.1.7...@react-navigation/drawer@6.1.8) (2021-10-12)
 
 

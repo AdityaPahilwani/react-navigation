@@ -77,7 +77,7 @@ export type HeaderOptions = {
   headerTintColor?: string;
   /**
    * Function which returns a React Element to render as the background of the header.
-   * This is useful for using backgrounds such as an image or a gradient.
+   * This is useful for using backgrounds such as an image, a gradient, blur effect etc.
    * You can use this with `headerTransparent` to render a blur view, for example, to create a translucent header.
    */
   headerBackground?: (props: {
@@ -98,7 +98,7 @@ export type HeaderOptions = {
   /**
    * Style object for the header. You can specify a custom background color here, for example.
    */
-  headerStyle?: StyleProp<ViewStyle>;
+  headerStyle?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
   /**
    * Whether to hide the elevation shadow (Android) or the bottom border (iOS) on the header.
    *

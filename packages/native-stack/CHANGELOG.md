@@ -3,6 +3,120 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.6.2](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.6.1...@react-navigation/native-stack@6.6.2) (2022-04-22)
+
+
+### Bug Fixes
+
+* fix incorrect header title when headerLeft is specified ([bc6f6b5](https://github.com/react-navigation/react-navigation/commit/bc6f6b5eadf1233dd94905efaa8ae2bf65311963)), closes [#10452](https://github.com/react-navigation/react-navigation/issues/10452)
+* fix incorrect warning for headerTransparent in native-stack ([4ff1ef5](https://github.com/react-navigation/react-navigation/commit/4ff1ef5028a1a618eb67c500b2ada274ce7cd37b)), closes [#10502](https://github.com/react-navigation/react-navigation/issues/10502)
+
+
+
+
+
+## [6.6.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.6.0...@react-navigation/native-stack@6.6.1) (2022-04-01)
+
+**Note:** Version bump only for package @react-navigation/native-stack
+
+
+
+
+
+# [6.6.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.5.2...@react-navigation/native-stack@6.6.0) (2022-04-01)
+
+
+### Features
+
+* add an ID prop to navigators ([4e4935a](https://github.com/react-navigation/react-navigation/commit/4e4935ac2584bc1a00209609cc026fa73e12c10a))
+
+
+
+
+
+## [6.5.2](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.5.1...@react-navigation/native-stack@6.5.2) (2022-03-23)
+
+
+### Bug Fixes
+
+* provide proper context to header elements in native stack ([5b01241](https://github.com/react-navigation/react-navigation/commit/5b012411076e8acc20ca779cbc19e36d7606d2b9)), closes [#10453](https://github.com/react-navigation/react-navigation/issues/10453)
+
+
+
+
+
+## [6.5.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.5.0...@react-navigation/native-stack@6.5.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* take screen count to dismiss from native side for native stack ([#10377](https://github.com/react-navigation/react-navigation/issues/10377)) ([27225a2](https://github.com/react-navigation/react-navigation/commit/27225a2d97c774c8c61f3d75c47690e5f212bb34))
+
+
+
+
+
+# [6.5.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.4.1...@react-navigation/native-stack@6.5.0) (2022-02-06)
+
+
+### Features
+
+* add customAnimationOnGesture & fullScreenSwipeEnabled props to native-stack ([#10321](https://github.com/react-navigation/react-navigation/issues/10321)) ([ab86045](https://github.com/react-navigation/react-navigation/commit/ab86045efecf03fb9cb704cad1f6add536f01e89))
+
+
+
+
+
+## [6.4.1](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.4.0...@react-navigation/native-stack@6.4.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* correctly set header to translucent ([c9eed38](https://github.com/react-navigation/react-navigation/commit/c9eed386cd46caee5534e3c339b573858f7de7eb))
+
+
+
+
+
+# [6.4.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.3.0...@react-navigation/native-stack@6.4.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* set header to translucent when using searchbar or large title ([a410f84](https://github.com/react-navigation/react-navigation/commit/a410f84d1426ac3cc7bc4052db9072189f236f71))
+
+
+### Features
+
+* add search bar to native-stack on Android ([e329c43](https://github.com/react-navigation/react-navigation/commit/e329c43334a01fa1282338cf519a3fc37dd453ad))
+
+
+
+
+
+# [6.3.0](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.2.5...@react-navigation/native-stack@6.3.0) (2022-01-29)
+
+
+### Bug Fixes
+
+* fix exposing custom header height with modals ([3b4edf7](https://github.com/react-navigation/react-navigation/commit/3b4edf7a8dfefb06a7ae1db2cbad48a5b19630bb))
+* fix useRoute & useNavigation in custom header in native stack ([826b0c5](https://github.com/react-navigation/react-navigation/commit/826b0c52c976137927223a03e4d91b5aae00ec77))
+* hide header shadow for transparent header ([ffcd171](https://github.com/react-navigation/react-navigation/commit/ffcd1713e0518e551207c1b7a6fb259a4db619a0))
+* make native stack background transparent when using transparentModal ([d58f4b9](https://github.com/react-navigation/react-navigation/commit/d58f4b9c09fbc0150ef3110127b79a6f0dd5006c))
+* wrap native stack with NavigationContent ([#10288](https://github.com/react-navigation/react-navigation/issues/10288)) ([d0f8620](https://github.com/react-navigation/react-navigation/commit/d0f8620549a9fa5f8c4828775f06df7ea6d55afb)), closes [#10287](https://github.com/react-navigation/react-navigation/issues/10287) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/core/src/useNavigation.tsx#L16](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/core/src/useNavigation.tsx/issues/L16) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/native/src/useLinkProps.tsx#L26](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/native/src/useLinkProps.tsx/issues/L26) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/core/src/useNavigationBuilder.tsx#L606](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/core/src/useNavigationBuilder.tsx/issues/L606) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/bottom-tabs/src/navigators/createBottomTabNavigator.tsx#L101](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/bottom-tabs/src/navigators/createBottomTabNavigator.tsx/issues/L101) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/drawer/src/navigators/createDrawerNavigator.tsx#L99](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/drawer/src/navigators/createDrawerNavigator.tsx/issues/L99) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/stack/src/navigators/createStackNavigator.tsx#L110](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/stack/src/navigators/createStackNavigator.tsx/issues/L110) [/github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/native-stack/src/navigators/createNativeStackNavigator.tsx#L67](https://github.com//github.com/react-navigation/react-navigation/blob/b91c9b05ff96727f5fa6ef0bec51b5d7eac06600/packages/native-stack/src/navigators/createNativeStackNavigator.tsx/issues/L67)
+
+
+### Features
+
+* **native-stack:** add support for header background image ([393773b](https://github.com/react-navigation/react-navigation/commit/393773b688247456d09f397a794eff19424502f6))
+* **native-stack:** export NativeStackView to support custom routers on native-stack ([#10260](https://github.com/react-navigation/react-navigation/issues/10260)) ([7b761f1](https://github.com/react-navigation/react-navigation/commit/7b761f1cc069ca68b96b5155be726024a345346f))
+* **native-stack:** expose custom header height ([#10113](https://github.com/react-navigation/react-navigation/issues/10113)) ([e93b2e9](https://github.com/react-navigation/react-navigation/commit/e93b2e9cb48b30eab895945e4da0c83324914e8b))
+* pass canGoBack to headerRight ([82a1669](https://github.com/react-navigation/react-navigation/commit/82a16690973a7935939a25a66d5786955b6c8ba7))
+
+
+
+
+
 ## [6.2.5](https://github.com/react-navigation/react-navigation/compare/@react-navigation/native-stack@6.2.4...@react-navigation/native-stack@6.2.5) (2021-10-16)
 
 
